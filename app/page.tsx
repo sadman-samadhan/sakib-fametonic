@@ -1,0 +1,12 @@
+// app/page.tsx
+'use client';
+import Layout from './components/Layout';
+import Hero from './components/Hero';
+
+export default function HomePage() {
+  return (
+    <Layout>
+      <Hero />
+    </Layout>
+  );
+}

@@ -1,7 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 
-const Hero = ({ isMobile }) => {
+interface HeroProps {
+  isMobile: boolean;
+}
+
+const Hero: React.FC<HeroProps> = ({ isMobile }) => {
   const containerWidth = isMobile ? "390px" : "1440px";
   const heroHugHeight = isMobile ? "auto" : "679px";
 
@@ -11,11 +15,10 @@ const Hero = ({ isMobile }) => {
         className="mx-auto relative"
         style={{
           maxWidth: containerWidth,
-          minHeight: heroHugHeight
+          minHeight: heroHugHeight,
         }}
       >
         <div className={`flex ${isMobile ? 'flex-col-reverse' : 'flex-row'}`}>
-
           {/* Left Content */}
           <div
             className="z-10 py-6 md:py-12 px-4 md:px-6"
@@ -24,19 +27,19 @@ const Hero = ({ isMobile }) => {
               position: isMobile ? "static" : "relative",
               left: isMobile ? "0" : "13%",
               zIndex: 35,
-              textAlign: isMobile ? "center" : "left"
+              textAlign: isMobile ? "center" : "left",
             }}
           >
-            <h1 className={`text-white ${isMobile ? 'text-xl leading-snug font-semibold mb-3' : 'text-4xl font-semibold mb-4'} `}>
-              Want to Turn Social Media
-              Into a Profitable Career?
+            <h1 className={`text-white ${isMobile ? 'text-xl leading-snug font-semibold mb-3' : 'text-4xl font-semibold mb-4'}`}>
+              Want to Turn Social Media Into a Profitable Career?
             </h1>
+
             <h2 className={`font-bold ${isMobile ? 'text-lg leading-snug mb-6' : 'text-4xl mb-8'}`}>
               <span
                 className="text-cyan-400"
                 style={{
                   textShadow: "1px 4px 3px rgba(255, 27, 107, 1)",
-                  display: "inline-block"
+                  display: "inline-block",
                 }}
               >
                 Discover your way to success <br />
@@ -62,7 +65,7 @@ const Hero = ({ isMobile }) => {
               className="mb-2"
               style={{
                 width: isMobile ? "100%" : "auto",
-                maxWidth: "100%"
+                maxWidth: "100%",
               }}
             >
               <button
@@ -72,7 +75,7 @@ const Hero = ({ isMobile }) => {
                   height: "40px",
                   width: isMobile ? "100%" : "60%",
                   boxShadow: "3px 4px 10px rgba(0, 210, 255, 1)",
-                  transition: "all 0.3s ease"
+                  transition: "all 0.3s ease",
                 }}
               >
                 GET STARTED &gt;
@@ -93,12 +96,11 @@ const Hero = ({ isMobile }) => {
               width: isMobile ? "280px" : "690px",
               height: isMobile ? "400px" : "665px",
               overflow: "visible",
-              marginTop: isMobile ? "calc(50% - 140px - 50px)" : undefined, 
+              marginTop: isMobile ? "calc(50% - 140px - 50px)" : undefined,
               marginBottom: isMobile ? "calc(50% - 140px - 100px)" : undefined,
               marginLeft: isMobile ? "calc(50% - 140px - 28px)" : undefined,
             }}
           >
-
             <div
               className="absolute"
               style={{
@@ -108,7 +110,7 @@ const Hero = ({ isMobile }) => {
                 left: "-40%",
                 borderRadius: "50%",
                 filter: "blur(30px)",
-                zIndex: 1
+                zIndex: 1,
               }}
             />
             <div
@@ -118,7 +120,7 @@ const Hero = ({ isMobile }) => {
                 height: "159%",
                 width: "100%",
                 left: "10%",
-                top: "-28%"
+                top: "-28%",
               }}
             >
               <Image

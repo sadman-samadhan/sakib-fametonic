@@ -2,7 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Header = ({ isMobile }) => {
+interface HeaderProps {
+  isMobile: boolean;
+}
+
+const Header: React.FC<HeaderProps> = ({ isMobile }) => {
   const bannerHeight = isMobile ? "76px" : "46px";
   const logoHeight = isMobile ? "60px" : "90px";
   const containerWidth = isMobile ? "390px" : "1440px";
@@ -29,21 +33,23 @@ const Header = ({ isMobile }) => {
       {/* Navigation */}
       <nav className="w-full bg-black">
         <div
-          className={`mx-auto flex items-center ${isMobile ? 'justify-center' : 'justify-between'
-            } px-4`}
+          className={`mx-auto flex items-center ${isMobile ? 'justify-center' : 'justify-between'} px-4`}
           style={{
             maxWidth: containerWidth,
             height: logoHeight,
           }}
         >
-          {/* Logo - mobile */}
+          {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" legacyBehavior>
               <a className="block">
-                <div className="relative" style={{
-                  height: logoHeight,
-                  width: isMobile ? "150px" : "535px"
-                }}>
+                <div
+                  className="relative"
+                  style={{
+                    height: logoHeight,
+                    width: isMobile ? "150px" : "535px",
+                  }}
+                >
                   <Image
                     src="/images/fametonic-logo.png"
                     alt="Fametonic"
@@ -60,10 +66,7 @@ const Header = ({ isMobile }) => {
           {!isMobile && (
             <div
               className="hidden md:flex items-center space-x-8"
-              style={{
-                position: "relative",
-                right: "13%"
-              }}
+              style={{ position: "relative", right: "13%" }}
             >
               <Link href="#" legacyBehavior>
                 <a className="text-gray-300 hover:text-cyan-400 transition text-sm font-medium">About us</a>

@@ -36,7 +36,7 @@ const Header = ({ isMobile }) => {
             height: logoHeight,
           }}
         >
-          {/* Logo - centered on mobile */}
+          {/* Logo - mobile */}
           <div className="flex-shrink-0">
             <Link href="/" legacyBehavior>
               <a className="block">
@@ -56,7 +56,7 @@ const Header = ({ isMobile }) => {
             </Link>
           </div>
 
-          {/* Desktop Links */}
+          {/* Desktop Nav */}
           {!isMobile && (
             <div
               className="hidden md:flex items-center space-x-8"

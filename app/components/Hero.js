@@ -44,7 +44,6 @@ const Hero = ({ isMobile }) => {
               </span>
             </h2>
 
-            {/* Value Propositions */}
             <ul className="space-y-3 mb-8 text-left md:text-left">
               {[
                 "Start growing your influence right away—no waiting required!",
@@ -59,7 +58,6 @@ const Hero = ({ isMobile }) => {
               ))}
             </ul>
 
-            {/* CTA Button */}
             <div
               className="mb-2"
               style={{
@@ -81,7 +79,6 @@ const Hero = ({ isMobile }) => {
               </button>
             </div>
 
-            {/* Mini Text & Terms */}
             <p className="text-xs text-gray-400 mb-3 md:px-16 px-4">1-minute quiz for personalized insights</p>
             <p className="text-xs text-gray-500 mb-3 px-4 md:px-0">
               By clicking "Get Started", you agree with Terms and Conditions, Privacy Policy, Subscription Terms
@@ -96,9 +93,9 @@ const Hero = ({ isMobile }) => {
               width: isMobile ? "280px" : "690px",
               height: isMobile ? "400px" : "665px",
               overflow: "visible",
-              marginTop: isMobile ? "calc(50% - 140px - 50px)" : undefined, // Center minus 10px
-              marginBottom: isMobile ? "calc(50% - 140px - 100px)" : undefined, // Center minus 10px
-              marginLeft: isMobile ? "calc(50% - 140px - 28px)" : undefined, // Center minus 10px
+              marginTop: isMobile ? "calc(50% - 140px - 50px)" : undefined, 
+              marginBottom: isMobile ? "calc(50% - 140px - 100px)" : undefined,
+              marginLeft: isMobile ? "calc(50% - 140px - 28px)" : undefined,
             }}
           >
 

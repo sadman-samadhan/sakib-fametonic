@@ -13,12 +13,7 @@
 /* Base Styles */
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
 }
@@ -34,21 +29,16 @@ body {
 .glowing-ring::before {
   content: '';
   position: absolute;
-  z-index: -1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 60%;
   height: 80%;
-  background: radial-gradient(
-    circle at 50% 50%, 
-    rgba(0, 229, 255, 0.4) 20%, 
-    rgba(255, 0, 102, 0.2) 70%, 
-    transparent 100%
-  );
+  background: radial-gradient(circle at 50% 50%, rgba(0, 229, 255, 0.4) 20%, rgba(255, 0, 102, 0.2) 70%, transparent 100%);
   filter: blur(80px);
   opacity: 0.7;
   border-radius: 50%;
+  z-index: -1;
 }
 
 /* Mobile Optimization */
@@ -61,7 +51,7 @@ body {
 }
 
 /* Cyan Highlight Text */
-.cyan-text {
+.text-cyan {
   color: #00e7f9;
 }
 
